@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do List</title>
+    <meta name="author" content="Przemysław Książek">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <h2 class="text-center">Lista zadań do wykonania</h2>
+
+        <section class="new-task-container">
+            <form>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Nazwa zadania...">
+
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">Dodaj zadanie</button>
+                    </span>
+                </div>
+            </form>
+        </section>
+
+        <section class="tasks-container">
+            <ul></ul>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/modules/tasks.js"></script>
+    <script src="js/modules/new-task.js"></script>
+    <script src="js/modules/tasks-list.js"></script>
+</body>
+</html>

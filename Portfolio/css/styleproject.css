@@ -1,0 +1,191 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'Oswald', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color:#2c333d;
+    color: #fff;
+    margin: 0 auto;
+
+}
+.container
+{
+    width:1300px;
+    margin: auto;
+}
+@media screen and (max-width:1700px){.container{width:900px}}
+@media screen and (max-width:1120px){.container{width:700px}}
+@media screen and (max-width:950px){.container{width:500px}}
+@media screen and (max-width:850px){.container{width:auto; margin:0 20px}}
+@media screen and (max-width:650px){.container{margin:0 10px;}}
+@media screen and (max-width:650px){.header{text-align: center; width: 100%; margin: auto;}}
+@media screen and (max-width:650px){.menu-items,{margin: auto; width: 100%;}}
+@media screen and (max-width:425px){.description{margin: auto 5px; width: auto;}}
+@media screen and (max-width:425px) and (min-width: 300px) {.home_box,.home_logo,.header_content{margin: auto; width: 100%;}}
+@media screen and (max-width:425px){.container,.home,.skils{margin: auto; width: 100%;}}
+@media screen and (max-width:300px){.home_box,.home_logo,.home_description,.menu,.header_content{margin: auto; width: 100%; font-weight: 100; overflow-y: hidden; text-align: center;}}
+@media screen and (max-width:300px){.description.header_content{margin: auto 7px; width: auto;}}
+@media screen and (max-width:300px){.container,.home,.skils{margin: auto; width: 100%;}}
+
+
+@import "compass/css3";
+
+$balls: 4;
+
+/* Design */
+$ballWidth: 13px;
+$ballColor1: #25c1ac;
+$ballColor2: #21bba6;
+$ballColor3: #1db6a1;
+
+
+/* Animation */
+$time: 2.6s;
+$waveHeight: 20px;
+$freq: 30;
+$scale: 1.1;
+
+
+/* Helpers */
+$ballSpacing: $ballWidth/1;
+$boxWidth: $ballWidth*$balls + $ballSpacing*$balls +$ballSpacing;
+
+
+
+body div.wave {
+  background: #fbfcfc;
+}
+
+.wave {
+  width: $boxWidth;
+  height: $ballWidth;
+  position: absolute;
+  top: 50%;
+  margin-top: -$ballWidth/2;
+  left: 50%;
+  margin-left: -$boxWidth/2;
+
+  div {
+    display: inline-block;
+    width: $ballWidth;
+    height: $ballWidth;
+    border-radius: $ballWidth/2;
+    background: $ballColor1;
+    animation: wave $time cubic-bezier(.626,0,0,1) infinite;
+    margin-right: $ballSpacing;
+  }
+
+  div:nth-child(1) {
+    animation-delay: -($time/$freq)*4;
+  }
+  div:nth-child(2) {
+    animation-delay: -($time/$freq)*3;
+  }
+  div:nth-child(3) {
+    animation-delay: -($time/$freq)*2;
+  }
+  div:nth-child(4) {
+    animation-delay: -($time/$freq)*1;
+  }
+}
+
+
+
+@keyframes wave {
+  0% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(0px);
+    background: $ballColor1;
+  }
+  60% {
+    background: $ballColor2;
+    transform: translateY($waveHeight);
+  }
+  80% {
+    background: $ballColor3;
+    transform: translateY(-$waveHeight);
+  }
+  100% {
+    background: $ballColor1;
+    transform: translateY(0px);
+  }
+}
+
+.container
+{
+    width:1300px;
+    margin: auto;
+
+}
+.header_content
+{
+    display: inline-block;
+    font-size: 25px;
+    border-bottom: 2px solid #2C53BE;
+    margin: 20px auto;
+    padding: 20px 10px 20px 0;
+    text-transform: uppercase;
+    height: 100%;
+}
+h2.header_content
+{
+  text-align: center;
+}
+.content
+{
+    position: relative;
+    padding-bottom: 70px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+.title
+{
+  margin: 10px auto;
+  text-align: center;
+}
+.img-project
+{
+  width: 30%;
+  height: 20%;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+}
+.description
+{
+  text-align: center;
+  margin-top: 20px;
+}
+.box_link
+{
+    text-decoration: none;
+    cursor: pointer;
+    color: #4f98ff;
+    text-align: center;
+}
+.box_link a:hover
+{
+    color: #9ec0f7;
+    cursor: pointer;
+}
+.social_small
+{
+    text-align: center;
+    margin: 40px auto -30px auto;
+    -webkit-transition: -webkit-transform 2s ease-in-out;
+    transition: -webkit-transform 2s ease-in-out;
+    transition: transform 2s ease-in-out;
+    transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
+}

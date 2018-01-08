@@ -1,0 +1,50 @@
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    background: url('../img/footer_lodyas.png') no-repeat; /* Background pattern from Subtle Patterns */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.app-container
+{
+    max-width: 480px;
+    width: 100%;
+    padding: 25px;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 62px rgba(0,0,0,0.1);
+}
+
+.text-center
+{
+    margin: 0 0 25px;
+    color: #FFF;
+}
+
+/* new task */
+
+.new-task-container
+{
+    margin-bottom: 20px;
+
+}
+
+.tasks-container ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.single-task
+{
+    margin-bottom: 12px;
+}
